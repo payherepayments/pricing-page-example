@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-column flex-row-ns pa5">
+    <div className="flex flex-column flex-row-ns pa3 pa5-ns">
       <div css={css`
         flex: 1;
         margin-bottom: 30px;
