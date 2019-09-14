@@ -30,10 +30,12 @@ function App() {
   const [success, setSuccess] = useState(null)
   const [state, setState] = useState({ screen: "signup" })
 
-  if (state.screen === "finished") {
+  if (state.screen === "finished" && success) {
     return (
-      <div>
-        <h3>Thanks for signing up {success.customerName}. We've sent you an email to confirm your account details.</h3>
+      <div className="pa5 lh-title">
+        <h3 css={css`
+          max-width: 30rem;
+        `}>Thanks for signing up {success.customerName}. We've sent you an email to confirm your account details.</h3>
       </div>
     )
   }
@@ -47,7 +49,7 @@ function App() {
           padding-right: 40px;
         }
       `}>
-        <h3 className="lh-heading f2 fw6">No additional costs.<br />Pay for what you use.</h3>
+        <h3 className="lh-title f2 fw6">No additional costs.<br />Pay for what you use.</h3>
 
         <div className="mt4 ba b--blue br2 flex" css={css`
           max-width: 260px;
@@ -214,6 +216,7 @@ function App() {
             console.error("Payment failed", err)
           }}
           onClose={() => {
+            console.log("onClose fired")
             setState({ ...state, screen: "finished" })
           }}
         />
