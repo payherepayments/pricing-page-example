@@ -218,6 +218,7 @@ function App() {
           onClose={() => {
             console.log("onClose fired")
             setState({ ...state, screen: "finished" })
+            setActivePlan(null)
           }}
         />
       }
