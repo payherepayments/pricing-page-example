@@ -167,7 +167,7 @@ function App() {
         :
           <React.Fragment>
             <div className="bg-blue pa3">
-              <h1 className="white ma0 fw4 f3">Annual plan</h1>
+              <h1 className="white ma0 fw4 f3">Monthly plan</h1>
               <h2 className="white flex items-start mb0">
                 <small className="fw4">$</small>
                 <span className="f1 fw6">72</span>
